@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package track_content_difference;
+
+service TrackContentDifferenceService {
+  rpc TriggerTrackContentDifference (TriggerRequest) returns (TriggerResponse) {}
+}
+
+message TriggerRequest {}
+
+message TriggerResponse {
+  bool success = 1;
+  string message = 2;
+}
